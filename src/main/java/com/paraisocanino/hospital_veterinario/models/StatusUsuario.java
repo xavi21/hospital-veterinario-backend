@@ -25,11 +25,11 @@ public class StatusUsuario extends Bitacora {
         this.idstatususuario = idstatususuario;
     }
 
-    public @NotBlank @Size(max = 100) String getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(@NotBlank @Size(max = 100) String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
