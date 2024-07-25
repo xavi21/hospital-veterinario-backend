@@ -1,48 +1,49 @@
-package com.paraisocanino.hospital_veterinario.models;
+package com.paraisocanino.hospital_veterinario.payload.response;
 
-import com.paraisocanino.hospital_veterinario.payload.Bitacora;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import com.paraisocanino.hospital_veterinario.models.Sucursal;
 
 import java.time.LocalDate;
-import java.util.Set;
 
-@Entity
-@Table(name = "usuario")
-public class Usuario extends Bitacora {
-
-    @Id
-    @NotBlank
-    @Size(max = 100)
+public class JwtResponse {
+    private String token;
+    private String type = "Bearer";
     private String idusuario;
-
-    @NotBlank
-    @Size(max = 100)
-    private String password;
-
-    @NotBlank
     private LocalDate ultimafechaingreso;
-
-    @NotBlank
     private Integer intentosdeacceso;
-
-    @Size(max = 100)
     private String sesionactual;
-
-    @NotBlank
     private LocalDate ultimafechacambiopassword;
-
-    @Size(max = 100)
     private String telefonomovil;
-
-    @NotBlank
     private Integer idstatususuario;
+    private Integer idsucursal;
 
-    @ManyToOne
-    @JoinColumn(name = "idsucursal", nullable = false)
-    private Sucursal idsucursal;
+    public JwtResponse(String accessToken, String idusuario, LocalDate ultimafechaingreso, Integer intentosdeacces,
+                       String sesionactual, LocalDate ultimafechacambiopassword, String telefonomovi, Integer idstatususuario, Integer idsucursal) {
+        this.token = accessToken;
+        this.idusuario = idusuario;
+        this.ultimafechaingreso = ultimafechaingreso;
+        this.intentosdeacceso = intentosdeacces;
+        this.sesionactual = sesionactual;
+        this.ultimafechacambiopassword = ultimafechacambiopassword;
+        this.telefonomovil = telefonomovi;
+        this.idstatususuario = idstatususuario;
+        this.idsucursal = idsucursal;
+    }
 
+    public String getAccessToken() {
+        return token;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.token = accessToken;
+    }
+
+    public String getTokenType() {
+        return type;
+    }
+
+    public void setTokenType(String tokenType) {
+        this.type = tokenType;
+    }
 
     public String getIdusuario() {
         return idusuario;
@@ -50,14 +51,6 @@ public class Usuario extends Bitacora {
 
     public void setIdusuario(String idusuario) {
         this.idusuario = idusuario;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public LocalDate getUltimafechaingreso() {
@@ -108,15 +101,11 @@ public class Usuario extends Bitacora {
         this.idstatususuario = idstatususuario;
     }
 
-    public Sucursal getIdsucursal() {
+    public Integer getIdsucursal() {
         return idsucursal;
     }
 
-    public void setIdsucursal(Sucursal idsucursal) {
+    public void setIdsucursal(Integer idsucursal) {
         this.idsucursal = idsucursal;
-    }
-
-    public Integer getKeySucursal() {
-        return idsucursal.getIdsucursal();
     }
 }
