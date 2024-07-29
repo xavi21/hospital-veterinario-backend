@@ -1,7 +1,6 @@
 package com.paraisocanino.hospital_veterinario.payload;
 
 import jakarta.persistence.MappedSuperclass;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
@@ -9,17 +8,13 @@ import java.time.LocalDate;
 @MappedSuperclass
 public abstract  class Bitacora {
 
-    @NotBlank
     private LocalDate fechacreacion;
 
-    @NotBlank
     @Size(max = 100)
     private String usuariocreacion;
 
-    @NotBlank
     private LocalDate fechamodificacion;
 
-    @NotBlank
     @Size(max = 100)
     private String usuariomodificacion;
 
