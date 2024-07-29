@@ -1,18 +1,17 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-
 import com.paraisocanino.hospital_veterinario.models.Sucursal;
-import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
+import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.SucursalRepository;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -24,7 +23,6 @@ public class SucursalController {
 
     @Autowired
     private JwtUtils jwtUtils;
-
 
 
     @GetMapping("/all")
