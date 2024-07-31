@@ -1,43 +1,31 @@
 package com.paraisocanino.hospital_veterinario.models;
 
+import com.paraisocanino.hospital_veterinario.payload.Bitacora;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-
-import java.time.LocalDate;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "opcion")
-public class Opcion {
+public class Opcion extends Bitacora {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GenericGenerator(name = "opcion", strategy = "enhanced-table", parameters = {
+            @org.hibernate.annotations.Parameter(name = "opcion", value = "sequence_opcion")})
+    @GeneratedValue(generator = "secuence_opcion", strategy = GenerationType.TABLE)
+    @SequenceGenerator(name = "secuence_opcion", allocationSize = 1)
     private Integer idopcion;
 
     @NotBlank
     @Size(max = 50)
     private String name;
 
-    @NotBlank
     private Integer ordenmenu;
 
     @NotBlank
     @Size(max = 100)
     private String pagina;
-
-    @NotBlank
-    private LocalDate fechacreacion;
-
-    @NotBlank
-    @Size(max = 100)
-    private String usuariocreacion;
-
-    @NotBlank
-    private LocalDate fechamodificacion;
-
-    @NotBlank
-    @Size(max = 100)
-    private String usuariomodificacion;
 
     public Integer getIdopcion() {
         return idopcion;
@@ -69,37 +57,5 @@ public class Opcion {
 
     public void setPagina(String pagina) {
         this.pagina = pagina;
-    }
-
-    public LocalDate getFechacreacion() {
-        return fechacreacion;
-    }
-
-    public void setFechacreacion(LocalDate fechacreacion) {
-        this.fechacreacion = fechacreacion;
-    }
-
-    public String getUsuariocreacion() {
-        return usuariocreacion;
-    }
-
-    public void setUsuariocreacion(String usuariocreacion) {
-        this.usuariocreacion = usuariocreacion;
-    }
-
-    public LocalDate getFechamodificacion() {
-        return fechamodificacion;
-    }
-
-    public void setFechamodificacion(LocalDate fechamodificacion) {
-        this.fechamodificacion = fechamodificacion;
-    }
-
-    public String getUsuariomodificacion() {
-        return usuariomodificacion;
-    }
-
-    public void setUsuariomodificacion(String usuariomodificacion) {
-        this.usuariomodificacion = usuariomodificacion;
     }
 }

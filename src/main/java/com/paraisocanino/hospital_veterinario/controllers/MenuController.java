@@ -1,11 +1,9 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
 import com.paraisocanino.hospital_veterinario.models.Menu;
-import com.paraisocanino.hospital_veterinario.models.Sucursal;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.MenuRepository;
-import com.paraisocanino.hospital_veterinario.repository.SucursalRepository;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

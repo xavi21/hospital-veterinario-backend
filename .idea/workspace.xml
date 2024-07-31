@@ -7,8 +7,9 @@
     <list default="true" id="89a17fa6-55ff-46c9-ae5e-cc2515a0550b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/MenuRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/MenuRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/OpcionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/OpcionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Opcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Opcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/OpcionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/OpcionRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,7 @@
       <workItem from="1721794077688" duration="4569000" />
       <workItem from="1721876774046" duration="7503000" />
       <workItem from="1722118353659" duration="1199000" />
-      <workItem from="1722273528441" duration="19869000" />
+      <workItem from="1722273528441" duration="22851000" />
     </task>
     <servers />
   </component>
@@ -132,8 +133,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/MenuController.java</url>
-          <line>59</line>
+          <line>57</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/OpcionController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/OpcionController.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
