@@ -5,7 +5,6 @@ import com.paraisocanino.hospital_veterinario.payload.LlaveCompuesta;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "usuario_opcion")
@@ -14,13 +13,10 @@ public class UsuarioOpcion extends Bitacora {
     @EmbeddedId
     private LlaveCompuesta id;
 
-    @NotBlank
     private Integer alta;
 
-    @NotBlank
     private Integer baja;
 
-    @NotBlank
     private Integer cambio;
 
     public LlaveCompuesta getId() {

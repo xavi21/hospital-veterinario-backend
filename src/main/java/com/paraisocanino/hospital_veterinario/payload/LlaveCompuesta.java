@@ -10,40 +10,40 @@ public class LlaveCompuesta implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String idPart1;
-    private Integer idPart2;
-    private Integer idPart3;
+    private String idusuario;
+    private Integer idmenu;
+    private Integer idopcion;
 
     public LlaveCompuesta() {}
 
     public LlaveCompuesta(String idPart1, Integer idPart2, Integer idPart3) {
-        this.idPart1 = idPart1;
-        this.idPart2 = idPart2;
-        this.idPart3 = idPart3;
+        this.idusuario = idPart1;
+        this.idmenu = idPart2;
+        this.idopcion = idPart3;
     }
 
-    public String getIdPart1() {
-        return idPart1;
+    public String getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdPart1(String idPart1) {
-        this.idPart1 = idPart1;
+    public void setIdusuario(String idusuario) {
+        this.idusuario = idusuario;
     }
 
-    public Integer getIdPart2() {
-        return idPart2;
+    public Integer getIdmenu() {
+        return idmenu;
     }
 
-    public void setIdPart2(Integer idPart2) {
-        this.idPart2 = idPart2;
+    public void setIdmenu(Integer idmenu) {
+        this.idmenu = idmenu;
     }
 
-    public Integer getIdPart3() {
-        return idPart3;
+    public Integer getIdopcion() {
+        return idopcion;
     }
 
-    public void setIdPart3(Integer idPart3) {
-        this.idPart3 = idPart3;
+    public void setIdopcion(Integer idopcion) {
+        this.idopcion = idopcion;
     }
 
     @Override
@@ -51,13 +51,13 @@ public class LlaveCompuesta implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LlaveCompuesta that = (LlaveCompuesta) o;
-        return Objects.equals(idPart1, that.idPart1) &&
-                Objects.equals(idPart2, that.idPart2) &&
-                Objects.equals(idPart3, that.idPart3);
+        return Objects.equals(idusuario, that.idusuario) &&
+                Objects.equals(idmenu, that.idmenu) &&
+                Objects.equals(idopcion, that.idopcion);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPart1, idPart2, idPart3);
+        return Objects.hash(idusuario, idmenu, idopcion);
     }
 }
