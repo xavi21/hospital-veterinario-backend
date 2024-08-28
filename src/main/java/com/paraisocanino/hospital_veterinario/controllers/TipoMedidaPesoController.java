@@ -1,6 +1,5 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,49 +17,49 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.paraisocanino.hospital_veterinario.models.TipoDocumento;
+import com.paraisocanino.hospital_veterinario.models.TipoMedidaPeso;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
-import com.paraisocanino.hospital_veterinario.repository.TipoDocumentoRepository;
+import com.paraisocanino.hospital_veterinario.repository.TipoMedidaPesoRepository;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/tipo-documento")
-public class TipoDocumentoController {
-@Autowired
+@RequestMapping("/api/tipo-medida-peso")
+public class TipoMedidaPesoController {
+    @Autowired
     private JwtUtils jwtUtils;
 
     @Autowired
-    private TipoDocumentoRepository tipoDocumentoRepository;
+    private TipoMedidaPesoRepository tipoMedidaPesoRepository;
 
     @GetMapping("/all")
-    public GeneralResponseList getAllTipoDocumento(@RequestHeader("Authorization") String tokenAdmin) {
-        List<TipoDocumento> tiposDocumento = tipoDocumentoRepository.findAll();
-        List<TipoDocumento> tipoDocumentoResponse = new ArrayList<>();
+    public GeneralResponseList getAllTipoMedidaPeso(@RequestHeader("Authorization") String tokenAdmin) {
+        List<TipoMedidaPeso> tipoMedidaPesos = tipoMedidaPesoRepository.findAll();
+        List<TipoMedidaPeso> tipoMedidaPesoResponse = new ArrayList<>();
 
-        for (TipoDocumento tipoDocumento : tiposDocumento) {
-            final TipoDocumento model = new TipoDocumento();
-            model.setIdTipoDocumento(tipoDocumento.getIdTipoDocumento());
-            model.setNombre(tipoDocumento.getNombre());
-            model.setUsuariocreacion(tipoDocumento.getUsuariocreacion());
-            model.setFechacreacion(tipoDocumento.getFechacreacion());
-            model.setUsuariomodificacion(tipoDocumento.getUsuariomodificacion());
-            model.setFechamodificacion(tipoDocumento.getFechamodificacion());
+        for (TipoMedidaPeso tipoMedidaPeso : tipoMedidaPesos) {
+            final TipoMedidaPeso model = new TipoMedidaPeso();
+            model.setIdTipoMedidaPeso(tipoMedidaPeso.getIdTipoMedidaPeso());
+            model.setNombre(tipoMedidaPeso.getNombre());
+            model.setUsuariocreacion(tipoMedidaPeso.getUsuariocreacion());
+            model.setFechacreacion(tipoMedidaPeso.getFechacreacion());
+            model.setUsuariomodificacion(tipoMedidaPeso.getUsuariomodificacion());
+            model.setFechamodificacion(tipoMedidaPeso.getFechamodificacion());
 
-            tipoDocumentoResponse.add(model);
+            tipoMedidaPesoResponse.add(model);
         }
 
         final GeneralResponseList response = new GeneralResponseList();
         response.setCode(200);
         response.setMessage("Exitoso");
-        response.setData(tipoDocumentoResponse);
+        response.setData(tipoMedidaPesoResponse);
 
         return response;
     }
 
     @PostMapping("/save")
-    public GeneralResponse createTipoDocumento(@RequestBody TipoDocumento tipoDocumento, @RequestHeader("Authorization") String tokenAdmin) {
+    public GeneralResponse createTipoMedidaPeso(@RequestBody TipoMedidaPeso tipoDocumento, @RequestHeader("Authorization") String tokenAdmin) {
 
         tokenAdmin = tokenAdmin.replace("Bearer ", "");
         final String user = jwtUtils.getUserNameFromJwtToken(tokenAdmin);
@@ -69,7 +68,7 @@ public class TipoDocumentoController {
         tipoDocumento.setUsuariocreacion(user);
         tipoDocumento.setFechacreacion(dateNow());
 
-        tipoDocumentoRepository.save(tipoDocumento);
+        tipoMedidaPesoRepository.save(tipoDocumento);
         final GeneralResponse response = new GeneralResponse();
         response.setCode(200);
         response.setMessage("Datos Guardados");
@@ -79,21 +78,21 @@ public class TipoDocumentoController {
     }
 
     @PutMapping("/update")
-    public GeneralResponse updateTipoDocumento(@RequestBody TipoDocumento tipoDocumento, @RequestHeader("Authorization") String tokenAdmin) {
+    public GeneralResponse updateTipoMedidaPeso(@RequestBody TipoMedidaPeso tipoMedidaPeso, @RequestHeader("Authorization") String tokenAdmin) {
 
         tokenAdmin = tokenAdmin.replace("Bearer ", "");
         final String user = jwtUtils.getUserNameFromJwtToken(tokenAdmin);
         final GeneralResponse response = new GeneralResponse();
 
-        Optional<TipoDocumento> currentTipoDocumento = tipoDocumentoRepository.findById(tipoDocumento.getIdTipoDocumento());
+        Optional<TipoMedidaPeso> currentTipoMedidaPeso = tipoMedidaPesoRepository.findById(tipoMedidaPeso.getIdTipoMedidaPeso());
 
-        if (currentTipoDocumento.isPresent()) {
+        if (currentTipoMedidaPeso.isPresent()) {
 
-            tipoDocumento.setFechamodificacion(dateNow());
-            tipoDocumento.setUsuariomodificacion(user);
-            tipoDocumento.setUsuariocreacion(currentTipoDocumento.get().getUsuariocreacion());
-            tipoDocumento.setFechacreacion(currentTipoDocumento.get().getFechacreacion());
-            tipoDocumentoRepository.save(tipoDocumento);
+            tipoMedidaPeso.setFechamodificacion(dateNow());
+            tipoMedidaPeso.setUsuariomodificacion(user);
+            tipoMedidaPeso.setUsuariocreacion(currentTipoMedidaPeso.get().getUsuariocreacion());
+            tipoMedidaPeso.setFechacreacion(currentTipoMedidaPeso.get().getFechacreacion());
+            tipoMedidaPesoRepository.save(tipoMedidaPeso);
 
             response.setCode(200);
             response.setMessage("Status Usuario Actualizado");
@@ -102,17 +101,17 @@ public class TipoDocumentoController {
             response.setMessage("Error al actualizar");
         }
 
-        response.setData(tipoDocumento);
+        response.setData(tipoMedidaPeso);
         return response;
     }
 
     @DeleteMapping(path = "/eliminar")
-    public GeneralResponse deleteTipoDocumento(@RequestParam Integer id) {
+    public GeneralResponse deleteTipoMedidaPeso(@RequestParam Integer id) {
         final GeneralResponse response = new GeneralResponse();
-        Optional<TipoDocumento> currentTipoDocumento = tipoDocumentoRepository.findById(id);
+        Optional<TipoMedidaPeso> currentTipoMedidaPeso = tipoMedidaPesoRepository.findById(id);
 
-        if (currentTipoDocumento.isPresent()) {
-            tipoDocumentoRepository.delete(currentTipoDocumento.get());
+        if (currentTipoMedidaPeso.isPresent()) {
+            tipoMedidaPesoRepository.delete(currentTipoMedidaPeso.get());
             response.setCode(200);
             response.setMessage("Registro Eliminado: " + id);
 

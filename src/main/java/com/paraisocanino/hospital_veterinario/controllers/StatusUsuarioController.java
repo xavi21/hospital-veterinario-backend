@@ -1,7 +1,6 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
 import com.paraisocanino.hospital_veterinario.models.StatusUsuario;
-import com.paraisocanino.hospital_veterinario.models.Sucursal;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.StatusUsuarioRepository;

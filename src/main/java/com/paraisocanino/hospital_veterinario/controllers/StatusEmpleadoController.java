@@ -18,11 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.paraisocanino.hospital_veterinario.models.StatusEmpleado;
-import com.paraisocanino.hospital_veterinario.models.StatusUsuario;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.StatusEmpleadoRepository;
-import com.paraisocanino.hospital_veterinario.repository.StatusUsuarioRepository;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
