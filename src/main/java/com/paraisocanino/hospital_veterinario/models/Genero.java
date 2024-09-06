@@ -21,18 +21,18 @@ public class Genero extends Bitacora {
             @org.hibernate.annotations.Parameter(name = "genero", value = "sequence_genero") })
     @GeneratedValue(generator = "secuence_genero", strategy = GenerationType.TABLE)
     @SequenceGenerator(name = "secuence_genero", allocationSize=1)
-    private Integer idGenero;
+    private Integer id_genero;
 
     @NotBlank
     @Size(max = 100)
     private String nombre;
 
-    public Integer getIdGenero() {
-        return idGenero;
+    public Integer getId_genero() {
+        return id_genero;
     }
 
-    public void setIdGenero(Integer idGenero) {
-        this.idGenero = idGenero;
+    public void setId_genero(Integer id_genero) {
+        this.id_genero = id_genero;
     }
 
     public String getNombre() {

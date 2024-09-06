@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a17fa6-55ff-46c9-ae5e-cc2515a0550b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/UsuarioOpcionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/request/UsuarioOpcionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/response/UsuarioMenuOpcion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/UsuarioMenuOpcionProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/PersonaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/PersonaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/UsuarioOpcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/UsuarioOpcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/LlaveCompuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/LlaveCompuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/UsuarioOpcionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/UsuarioOpcionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/EstadoCivilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/EstadoCivilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/GeneroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/GeneroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/EstadoCivil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/EstadoCivil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Genero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -95,7 +95,11 @@
       <workItem from="1721876774046" duration="7503000" />
       <workItem from="1722118353659" duration="1199000" />
       <workItem from="1722273528441" duration="26548000" />
-      <workItem from="1722723101882" duration="9145000" />
+      <workItem from="1722723101882" duration="9553000" />
+      <workItem from="1724294467401" duration="1260000" />
+      <workItem from="1724529438435" duration="1046000" />
+      <workItem from="1725040752418" duration="51000" />
+      <workItem from="1725592143584" duration="5275000" />
     </task>
     <servers />
   </component>

@@ -41,7 +41,7 @@ public class EstadoCivilController {
 
         for (EstadoCivil estadoCivil : estadosCiviles) {
             final EstadoCivil model = new EstadoCivil();
-            model.setIdEstadoCivil(estadoCivil.getIdEstadoCivil());
+            model.setId_estado_civil(estadoCivil.getId_estado_civil());
             model.setNombre(estadoCivil.getNombre());
             model.setUsuariocreacion(estadoCivil.getUsuariocreacion());
             model.setFechacreacion(estadoCivil.getFechacreacion());
@@ -85,7 +85,7 @@ public class EstadoCivilController {
         final String user = jwtUtils.getUserNameFromJwtToken(tokenAdmin);
         final GeneralResponse response = new GeneralResponse();
 
-        Optional<EstadoCivil> currentStatusEmpleado = estadoCivilRepository.findById(estadoCivil.getIdEstadoCivil());
+        Optional<EstadoCivil> currentStatusEmpleado = estadoCivilRepository.findById(estadoCivil.getId_estado_civil());
 
         if (currentStatusEmpleado.isPresent()) {
 

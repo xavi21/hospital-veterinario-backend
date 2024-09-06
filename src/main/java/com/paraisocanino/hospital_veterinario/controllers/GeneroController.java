@@ -40,7 +40,7 @@ public class GeneroController {
 
         for (Genero genero : generos) {
             final Genero model = new Genero();
-            model.setIdGenero(genero.getIdGenero());
+            model.setId_genero(genero.getId_genero());
             model.setNombre(genero.getNombre());
             model.setUsuariocreacion(genero.getUsuariocreacion());
             model.setFechacreacion(genero.getFechacreacion());
@@ -84,7 +84,7 @@ public class GeneroController {
         final String user = jwtUtils.getUserNameFromJwtToken(tokenAdmin);
         final GeneralResponse response = new GeneralResponse();
 
-        Optional<Genero> currentStatusEmpleado = generoRepository.findById(genero.getIdGenero());
+        Optional<Genero> currentStatusEmpleado = generoRepository.findById(genero.getId_genero());
 
         if (currentStatusEmpleado.isPresent()) {
 

@@ -22,18 +22,18 @@ public class EstadoCivil extends Bitacora {
             @org.hibernate.annotations.Parameter(name = "estado_civil", value = "sequence_estado_civil") })
     @GeneratedValue(generator = "secuence_estado_civil", strategy = GenerationType.TABLE)
     @SequenceGenerator(name = "secuence_estado_civil", allocationSize=1)
-    private Integer idEstadoCivil;
+    private Integer id_estado_civil;
 
     @NotBlank
     @Size(max = 100)
     private String nombre;
 
-    public Integer getIdEstadoCivil() {
-        return idEstadoCivil;
+    public Integer getId_estado_civil() {
+        return id_estado_civil;
     }
 
-    public void setIdEstadoCivil(Integer idEstadoCivil) {
-        this.idEstadoCivil = idEstadoCivil;
+    public void setId_estado_civil(Integer id_estado_civil) {
+        this.id_estado_civil = id_estado_civil;
     }
 
     public String getNombre() {
