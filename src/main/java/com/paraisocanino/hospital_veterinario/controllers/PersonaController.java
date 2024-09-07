@@ -105,6 +105,23 @@ public class PersonaController {
         return response;
     }
 
+    @DeleteMapping(path = "/eliminar")
+    public GeneralResponse deletePersona(@RequestParam Integer id) {
+        final GeneralResponse response = new GeneralResponse();
+        Optional<Persona> currentPersona = personaRepository.findById(id);
+
+        if (currentPersona.isPresent()) {
+            personaRepository.delete(currentPersona.get());
+            response.setCode(200);
+            response.setMessage("Registro Eliminado: " + id);
+
+        } else {
+            response.setCode(200);
+            response.setMessage("No existe registro :" + id);
+        }
+        return response;
+    }
+
 
     private LocalDate dateNow() {
         return LocalDate.now();
