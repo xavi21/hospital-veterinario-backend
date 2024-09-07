@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -71,6 +72,34 @@ public class MascotaController {
         response.setMessage("Datos Guardados");
         response.setData(mascota);
 
+        return response;
+    }
+
+    @PutMapping("/update")
+    public GeneralResponse updateMascota(@RequestBody Mascota mascota, @RequestHeader("Authorization") String tokenAdmin) {
+
+        tokenAdmin = tokenAdmin.replace("Bearer ", "");
+        final String user = jwtUtils.getUserNameFromJwtToken(tokenAdmin);
+        final GeneralResponse response = new GeneralResponse();
+
+        Optional<Mascota> currentMascota = mascotaRepository.findById(mascota.getIdmascota());
+
+        if (currentMascota.isPresent()) {
+
+            mascota.setFechamodificacion(dateNow());
+            mascota.setUsuariomodificacion(user);
+            mascota.setUsuariocreacion(currentMascota.get().getUsuariocreacion());
+            mascota.setFechacreacion(currentMascota.get().getFechacreacion());
+            mascotaRepository.save(mascota);
+
+            response.setCode(200);
+            response.setMessage("Persona Actualizada");
+        } else {
+            response.setCode(401);
+            response.setMessage("Error al actualizar");
+        }
+
+        response.setData(mascota);
         return response;
     }
 
