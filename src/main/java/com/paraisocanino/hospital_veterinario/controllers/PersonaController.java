@@ -1,18 +1,15 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
 import com.paraisocanino.hospital_veterinario.models.Persona;
-import com.paraisocanino.hospital_veterinario.models.Talla;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.PersonaProjection;
 import com.paraisocanino.hospital_veterinario.repository.PersonaRepository;
-import com.paraisocanino.hospital_veterinario.repository.UsuarioMenuOpcionProjection;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
