@@ -4,6 +4,7 @@ import com.paraisocanino.hospital_veterinario.models.Mascota;
 import com.paraisocanino.hospital_veterinario.models.Persona;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
+import com.paraisocanino.hospital_veterinario.repository.MascotaProjection;
 import com.paraisocanino.hospital_veterinario.repository.MascotaRepository;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,31 +28,13 @@ public class MascotaController {
 
     @GetMapping("/all")
     public GeneralResponseList getMascota(@RequestHeader("Authorization") String tokenAdmin) {
-        List<Mascota> mascotas = mascotaRepository.findAll();
+        List<MascotaProjection> mascotas = mascotaRepository.findAllMascota();
 
-        List<Mascota> mascotaResponse = new ArrayList<>();
-
-        for (Mascota mascota : mascotas) {
-            Mascota mascotar = new Mascota();
-            mascotar.setIdmascota(mascota.getIdmascota());
-            mascotar.setIdTipoMascota(mascota.getIdTipoMascota());
-            mascotar.setId_genero(mascota.getId_genero());
-            mascotar.setIdpersona(mascota.getIdpersona());
-            mascotar.setIdColor(mascota.getIdColor());
-            mascotar.setIdTalla(mascota.getIdTalla());
-            mascotar.setNombre(mascota.getNombre());
-            mascotar.setPeso(mascota.getPeso());
-            mascotar.setFechacreacion(mascota.getFechacreacion());
-            mascotar.setUsuariocreacion(mascota.getUsuariocreacion());
-            mascotar.setFechamodificacion(mascota.getFechamodificacion());
-            mascotar.setUsuariomodificacion(mascota.getUsuariomodificacion());
-            mascotaResponse.add(mascotar);
-        }
 
         final GeneralResponseList response = new GeneralResponseList();
         response.setCode(200);
         response.setMessage("Exitoso");
-        response.setData(mascotaResponse);
+        response.setData(mascotas);
 
         return response;
     }

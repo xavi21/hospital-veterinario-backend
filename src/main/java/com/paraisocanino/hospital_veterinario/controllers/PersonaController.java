@@ -4,7 +4,9 @@ import com.paraisocanino.hospital_veterinario.models.Persona;
 import com.paraisocanino.hospital_veterinario.models.Talla;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
+import com.paraisocanino.hospital_veterinario.repository.PersonaProjection;
 import com.paraisocanino.hospital_veterinario.repository.PersonaRepository;
+import com.paraisocanino.hospital_veterinario.repository.UsuarioMenuOpcionProjection;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,33 +29,12 @@ public class PersonaController {
 
     @GetMapping("/all")
     public GeneralResponseList getPersonas(@RequestHeader("Authorization") String tokenAdmin) {
-        List<Persona> personas = personaRepository.findAll();
-
-        List<Persona> personaResponse = new ArrayList<>();
-
-        for (Persona persona : personas) {
-            Persona personar = new Persona();
-            personar.setIdpersona(persona.getIdpersona());
-            personar.setNombre(persona.getNombre());
-            personar.setApellido(persona.getApellido());
-            personar.setFechanacimiento(persona.getFechanacimiento());
-            personar.setId_genero(persona.getId_genero());
-            personar.setDireccion(persona.getDireccion());
-            personar.setTelefono(persona.getTelefono());
-            personar.setCorreoelectronico(persona.getCorreoelectronico());
-            personar.setId_estado_civil(persona.getId_estado_civil());
-            personar.setFechacreacion(persona.getFechacreacion());
-            personar.setUsuariocreacion(persona.getUsuariocreacion());
-            personar.setFechamodificacion(persona.getFechamodificacion());
-            personar.setUsuariomodificacion(persona.getUsuariomodificacion());
-
-            personaResponse.add(personar);
-        }
+        List<PersonaProjection> personas = personaRepository.findAllPersona();
 
         final GeneralResponseList response = new GeneralResponseList();
         response.setCode(200);
         response.setMessage("Exitoso");
-        response.setData(personaResponse);
+        response.setData(personas);
 
         return response;
     }
