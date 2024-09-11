@@ -1,12 +1,10 @@
 package com.paraisocanino.hospital_veterinario.controllers;
 
 import com.paraisocanino.hospital_veterinario.models.Empleado;
-import com.paraisocanino.hospital_veterinario.models.Persona;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
 import com.paraisocanino.hospital_veterinario.repository.EmpleadoProjection;
 import com.paraisocanino.hospital_veterinario.repository.EmpleadoRepository;
-import com.paraisocanino.hospital_veterinario.repository.PersonaProjection;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
