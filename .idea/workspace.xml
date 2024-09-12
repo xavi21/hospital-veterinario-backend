@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a17fa6-55ff-46c9-ae5e-cc2515a0550b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/ConsultaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Consulta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/ConsultaProjection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/ConsultaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/CitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/CitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/ConsultaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/ConsultaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,7 @@
       <workItem from="1726089579292" duration="702000" />
       <workItem from="1726090294689" duration="356000" />
       <workItem from="1726090664681" duration="796000" />
-      <workItem from="1726091475445" duration="867000" />
+      <workItem from="1726091475445" duration="1310000" />
     </task>
     <servers />
   </component>
