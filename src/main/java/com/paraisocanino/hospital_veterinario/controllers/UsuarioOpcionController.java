@@ -138,7 +138,7 @@ public class UsuarioOpcionController {
             response.setMessage("Registro Eliminado");
 
         } else {
-            response.setCode(200);
+            response.setCode(400);
             response.setMessage("No existe el Registro");
         }
         return response;

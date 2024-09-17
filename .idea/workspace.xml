@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a17fa6-55ff-46c9-ae5e-cc2515a0550b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/MedicamentoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Medicamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/MedicamentoProjection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/MedicamentoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/DetalleRecetaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/DetalleReceta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/DetalleRecetaCompuesta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/request/DetalleRecetaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/DetalleRecetaProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/DetallerecetaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/UsuarioOpcionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/UsuarioOpcionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +115,9 @@
       <workItem from="1726089579292" duration="702000" />
       <workItem from="1726090294689" duration="356000" />
       <workItem from="1726090664681" duration="796000" />
-      <workItem from="1726091475445" duration="6794000" />
+      <workItem from="1726091475445" duration="6938000" />
+      <workItem from="1726247147313" duration="3577000" />
+      <workItem from="1726543807834" duration="6226000" />
     </task>
     <servers />
   </component>
@@ -177,6 +182,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/OpcionController.java</url>
           <line>86</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/DetalleRecetaController.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/DetalleRecetaCompuesta.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
