@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89a17fa6-55ff-46c9-ae5e-cc2515a0550b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/DetalleRecetaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/DetalleReceta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/DetalleRecetaCompuesta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/payload/request/DetalleRecetaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/DetalleRecetaProjection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/DetallerecetaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/GroomingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/models/Grooming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/GroomingProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/repository/GroomingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/UsuarioOpcionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paraisocanino/hospital_veterinario/controllers/UsuarioOpcionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,28 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.HospitalVeterinarioApplication.executor": "Run",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Universidad/2024/Segundo semestre/PG2/Proyecto Final/Backend/hospital-veterinario-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propDebugger",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.HospitalVeterinarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Universidad/2024/Segundo semestre/PG2/Proyecto Final/Backend/hospital-veterinario-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="HospitalVeterinarioApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hospital_veterinario" />
@@ -117,7 +114,8 @@
       <workItem from="1726090664681" duration="796000" />
       <workItem from="1726091475445" duration="6938000" />
       <workItem from="1726247147313" duration="3577000" />
-      <workItem from="1726543807834" duration="6226000" />
+      <workItem from="1726543807834" duration="6668000" />
+      <workItem from="1727235023206" duration="3035000" />
     </task>
     <servers />
   </component>
