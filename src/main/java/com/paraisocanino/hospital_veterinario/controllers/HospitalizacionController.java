@@ -74,7 +74,7 @@ public class HospitalizacionController {
             hospitalizacionRepository.save(hospitalizacion);
 
             response.setCode(200);
-            response.setMessage("Persona Actualizada");
+            response.setMessage("Datos Actualizados");
         } else {
             response.setCode(401);
             response.setMessage("Error al actualizar");

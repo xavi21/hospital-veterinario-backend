@@ -11,4 +11,6 @@ import java.util.List;
 public interface GroomingRepository extends JpaRepository<Grooming, Integer> {
     @Query(value = "SELECT * FROM grooming_view", nativeQuery = true)
     List<GroomingProjection> findAllGrooming();
+
+
 }
