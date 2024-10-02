@@ -4,10 +4,7 @@ import com.paraisocanino.hospital_veterinario.models.Persona;
 import com.paraisocanino.hospital_veterinario.models.Receta;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponse;
 import com.paraisocanino.hospital_veterinario.payload.response.GeneralResponseList;
-import com.paraisocanino.hospital_veterinario.repository.PersonaProjection;
-import com.paraisocanino.hospital_veterinario.repository.PersonaRepository;
-import com.paraisocanino.hospital_veterinario.repository.RecetaProjection;
-import com.paraisocanino.hospital_veterinario.repository.RecetaRepository;
+import com.paraisocanino.hospital_veterinario.repository.*;
 import com.paraisocanino.hospital_veterinario.security.jwt.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +32,19 @@ public class RecetaController {
         response.setCode(200);
         response.setMessage("Exitoso");
         response.setData(receta);
+
+        return response;
+    }
+
+    @GetMapping("/medicamentoByConsulta")
+    public GeneralResponseList getMedicamentoByConsulta(@RequestHeader("Authorization") String tokenAdmin, @RequestParam Integer idconsulta) {
+        List<RecetaProjection> consultaMedicamento = recetaRepository.findmedicamentoByConsulta(idconsulta);
+
+
+        final GeneralResponseList response = new GeneralResponseList();
+        response.setCode(200);
+        response.setMessage("Exitoso");
+        response.setData(consultaMedicamento);
 
         return response;
     }
