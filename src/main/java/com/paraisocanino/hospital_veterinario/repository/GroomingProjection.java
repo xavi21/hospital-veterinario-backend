@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 public interface GroomingProjection {
 
+    Integer getidgrooming();
+
     Integer getidcita();
 
     String getnombre_mascota();
